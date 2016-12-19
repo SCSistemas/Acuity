@@ -13,6 +13,6 @@ exports.config = {
         allScriptsTimeout: 20000
     },
     capabilities: {
-        'browserName': 'firefox'
+        'browserName': 'chrome'
     }
 };
