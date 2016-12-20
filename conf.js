@@ -5,7 +5,7 @@
 exports.config = {
     framework: 'jasmine',
     seleniumAddress: 'http://localhost:4444/wd/hub',
-    specs: ['Login.js','Advertiser/*.js'],
+    specs: ['Login.js','Licensee/*.js', 'Agency/*.js', 'Advertiser/*.js'],
     jasmineNodeOpts: {
         showColors: true, // Use colors in the command line report.
         defaultTimeoutInterval: 25000,
