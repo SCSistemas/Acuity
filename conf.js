@@ -28,5 +28,12 @@ exports.config = {
             takeScreenshotsOnlyOnFailures: true
         }));
 
-    }
+    },
+
+    /*beforeEach:(function() {
+        //browser.ignoreSynchronization = true;
+        //broser.waitForAngular();
+    })*/
+
+
 };

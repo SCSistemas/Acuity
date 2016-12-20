@@ -15,6 +15,7 @@ describe('New Agency Test', function() {
         var NewAge = element(by.css('a[href="/#/admin/agencies/edit/"]'));
         browser.wait(EC.visibilityOf(NewAge), 8000);
         NewAge.click();
+        browser.sleep(3000);
 
         element(by.name('licenseeId')).click();                             //Type
         element(by.xpath('.//*[@label="QALic"]')).click();
