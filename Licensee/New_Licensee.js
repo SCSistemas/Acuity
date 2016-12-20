@@ -1,8 +1,8 @@
 /**
  * Created by kmimos on 12-12-2016.
  */
-describe('New Licensee Test', function() {
-    it('New Licensee', function() {
+describe('New Licensee Tests', function() {
+    it('Required Field Tests', function() {
         browser.sleep(3000);
         var EC = protractor.ExpectedConditions;
 
@@ -13,6 +13,26 @@ describe('New Licensee Test', function() {
         var NewLic = element(by.xpath('//*[@id="side-menu"]/li[5]/ul/li[1]/ul/li[3]'));
         browser.wait(EC.visibilityOf(NewLic), 8000);
         NewLic.click();
+        browser.sleep(3000);
+        /*---------------------------------------------------------------------------------------------*/
+
+        element(by.name('name')).click();                               //Licensee Name
+        element(by.name('displayName')).click();                        //Display Name
+        element(by.name('licenseeTypeId')).click();                     //Type
+        element(by.name('website')).click();                            //Website
+        element(by.name('licenseeCampaignManagerId')).click();          //Campaign Manager
+        element(by.name('licenseeSalesRepId')).click();                 //Sales Rep
+        var addr = element(by.name('address1')).click();                //Address
+        element(by.name('address2')).click();                           //Suite
+        element(by.name('phone')).click();                              //Phone
+        element(by.name('fax')).click();                                //Fax
+
+        /*---------------------------------------------------------------------------------------------*/
+
+        var requiredFieldMessages = element.all(by.xpath('//span[contains(text(), "This field is required")]'));
+        expect(requiredFieldMessages.count()).toEqual(5);
+    });
+    it('New Licensee', function() {
 
         element(by.name('name')).sendKeys('QALic2');                            //Licensee Name
         element(by.name('displayName')).sendKeys('QALic');                      //Display Name

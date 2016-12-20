@@ -5,7 +5,7 @@
 
 describe('New Agency Test', function() {
     it('New Agency', function() {
-        browser.sleep(3000);
+        //browser.sleep(3000);
         var EC = protractor.ExpectedConditions;
 
         element(by.xpath('.//*[contains(text(), "Admin")]')).click();
