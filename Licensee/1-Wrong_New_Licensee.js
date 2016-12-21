@@ -15,7 +15,7 @@ describe('Wrong parameters in Licensee Creation Test', function() {
 
     afterEach(function() {
 
-        browser.sleep(2000);
+        browser.sleep(5000);
         element(by.name('name')).clear();                               //Licensee Name
         element(by.name('displayName')).clear();                        //Display Name
         //element(by.name('licenseeTypeId')).clear();                   //Type
@@ -27,14 +27,14 @@ describe('Wrong parameters in Licensee Creation Test', function() {
         element(by.name('address2')).clear();                           //Suite
         element(by.name('phone')).clear();                              //Phone
         element(by.name('fax')).clear();                                //Fax
-        browser.sleep(2000);
+        browser.sleep(5000);
     });
 
     it('Enter New Licensee Menu', function() {
         var EC = protractor.ExpectedConditions;
-        browser.sleep(3000);
+        //browser.sleep(5000);
         element(by.xpath('.//*[contains(text(), "Admin")]')).click();
-        browser.sleep(3000);
+        //browser.sleep(5000);
         element(by.xpath('//*[contains(text(), "Licensees")]')).click();
 
         var NewLic = element(by.xpath('//*[@id="side-menu"]/li[5]/ul/li[1]/ul/li[3]'));

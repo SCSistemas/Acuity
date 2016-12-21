@@ -2,7 +2,11 @@
  * Created by kmimos on 20-12-2016.
  */
 // spec.js
-describe('Protractor Demo App2', function() {
+describe('Wrong Data Login Test Suite', function() {
+    beforeEach(function(){
+        waitForAngular();
+        browser.sleep(5000);
+    });
     it('UI3 Enabled', function() {
         browser.get("http://trade-qa.acuityads.com:8080//login.html");
         browser.driver.manage().window().maximize();
