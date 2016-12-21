@@ -7,7 +7,7 @@ var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
 exports.config = {
     framework: 'jasmine',
     seleniumAddress: 'http://localhost:4444/wd/hub',
-    specs: ['Login/*', 'Licensee/*.js'],
+    //specs: ['Login/*', 'Licensee/*.js'],
     jasmineNodeOpts: {
         showColors: true, // Use colors in the command line report.
         defaultTimeoutInterval: 25000,
@@ -16,6 +16,11 @@ exports.config = {
     },
     capabilities: {
         'browserName': 'chrome'
+    },
+
+    suites: {
+        Login: './Login/*.js',
+        Licensee: './Licensee/*.js'
     },
 
     onPrepare: function () {
