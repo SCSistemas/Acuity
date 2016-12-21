@@ -15,9 +15,9 @@ exports.config = {
         allScriptsTimeout: 20000
     },
     capabilities: {
-        browserName: 'chrome',
-        maxInstances: 5,
-        count: 1
+        browserName: 'chrome'
+        //maxInstances: 5,
+        //count: 1
     },
 
     suites: {
